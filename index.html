@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مواقيت الصلاة</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">مواقيت الصلاة</h1>
+
+      <div class="section">
+        <h2 class="section-title">اختر الدولة والمدينة</h2>
+        <input
+          type="text"
+          id="locationSearch"
+          placeholder="اكتب اسم الدولة أو المدينة"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <div id="suggestions" class="suggestions-list"></div>
+      </div>
+
+      <div class="section" id="dateSection" style="display: none">
+        <h2 class="section-title">اختر التاريخ</h2>
+        <input type="date" id="dateInput" />
+      </div>
+
+      <div class="prayer-cards" id="prayerCards" style="display: none"></div>
+    </div>
+
+    <script src="locations.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
